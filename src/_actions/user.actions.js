@@ -41,17 +41,12 @@ function logout() {
 }
 
 function register(Name, Email, Password, ConfirmPassword) {
-<<<<<<< HEAD
 debugger;
-=======
-
->>>>>>> 9aabf6880920dc13c5c1d705e212bf09c39a7ad8
     return dispatch => {
         dispatch(request(Email));
         userService.register(Name, Email, Password, ConfirmPassword)
             .then(
             Email => {
-<<<<<<< HEAD
               //  dispatch(success(Email));
                 debugger;
               ///  dispatch(alertActions.success('Registration successful ! Verification Email successfully sent'));
@@ -64,18 +59,6 @@ debugger;
 
 //             }
             // );
-=======
-                dispatch(success(Email));
-                dispatch(alertActions.success('Registration successful ! Verification Email successfully sent'));
-                //      history.push('/login');
-            },
-            error => {
-                dispatch(failure(error));
-                dispatch(alertActions.error("Passwords does not match , Registration unsuccessful"));
-
-            }
-            );
->>>>>>> 9aabf6880920dc13c5c1d705e212bf09c39a7ad8
     };
 
     function request(user) { return { type: userConstants.REGISTER_REQUEST, user } }

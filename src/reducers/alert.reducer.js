@@ -1,10 +1,7 @@
 import { alertConstants } from '../_constants';
 
 export function alert(state = {}, action) {
-<<<<<<< HEAD
   debugger;
-=======
->>>>>>> 9aabf6880920dc13c5c1d705e212bf09c39a7ad8
   switch (action.type) {
     case alertConstants.SUCCESS:
       return {

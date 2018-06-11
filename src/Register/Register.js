@@ -6,10 +6,7 @@ import { NavLink } from 'react-router-dom';
 import Dashboard from '../components/common/dashboard';
 import { BarLoader } from 'react-css-loaders';
 import Footer from '../components/common/footer';
-<<<<<<< HEAD
 import { alertActions } from '../_actions/alert.actions';
-=======
->>>>>>> 9aabf6880920dc13c5c1d705e212bf09c39a7ad8
 
 class register extends React.Component {
     constructor(props) {
@@ -35,24 +32,16 @@ class register extends React.Component {
     }
 
     handleSubmit(e) {
-<<<<<<< HEAD
         debugger;
-=======
->>>>>>> 9aabf6880920dc13c5c1d705e212bf09c39a7ad8
         e.preventDefault();
         this.setState({ submitted: true });
         const { Name, Email, Password, ConfirmPassword } = this.state;
         const { dispatch } = this.props;
-<<<<<<< HEAD
         if (Email && Password && ConfirmPassword &&(Password==ConfirmPassword)) {
             debugger;
             alert("Registered Successfully");
             dispatch(userActions.register(Name, Email, Password, ConfirmPassword))
   
-=======
-        if (Email && Password && ConfirmPassword) {
-            dispatch(userActions.register(Name, Email, Password, ConfirmPassword));
->>>>>>> 9aabf6880920dc13c5c1d705e212bf09c39a7ad8
         }
     }
     
@@ -102,29 +91,19 @@ class register extends React.Component {
                         </div>
                         <div className={'form-group' + (submitted && !Password ? ' has-error' : '')}>
                             <label htmlFor="Password" className="labl tc">Password</label>
-<<<<<<< HEAD
                             <input type="password" className="form-control" name="Password" value={Password} onChange={this.handleChange}  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                         title="Must contain at least one number and one uppercase and lowercase letter,
                          and at least 8 or more characters" required  />
-=======
-                            <input type="password" className="form-control" name="Password" value={Password} onChange={this.handleChange} />
->>>>>>> 9aabf6880920dc13c5c1d705e212bf09c39a7ad8
                             {submitted && !Password &&
                                 <div className="help-block labl zoom">Password is required</div>
                             }
                         </div>
                         <div className={'form-group' + (submitted && !ConfirmPassword ? ' has-error' : '')}>
                             <label htmlFor="ConfirmPassword" className="labl tc">ConfirmPassword</label>
-<<<<<<< HEAD
                             <input className="form-control" type="password" placeholder="ConfirmPassword" name="ConfirmPassword" value={this.state.ConfirmPassword} onChange={this.handleChange} required/>
 
                                 {this.state.submitted &&!(this.state.ConfirmPassword===this.state.Password)&&
                                     <div class="text-danger">Password Doesnot match</div>       
-=======
-                            <input type="password" className="form-control" name="ConfirmPassword" value={ConfirmPassword} onChange={this.handleChange} />
-                            {submitted && !ConfirmPassword &&
-                                <div className="help-block labl zoom">Password is required</div>
->>>>>>> 9aabf6880920dc13c5c1d705e212bf09c39a7ad8
                             }
                         </div>
                         <div className="form-group">
