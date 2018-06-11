@@ -1,7 +1,10 @@
 import { authHeader } from '../_healpers/auth-header';
 import axios from 'axios';
+<<<<<<< HEAD
 import { history } from '../_healpers/history';
 
+=======
+>>>>>>> 9aabf6880920dc13c5c1d705e212bf09c39a7ad8
 export const userService = {
     login,
     logout,
@@ -51,11 +54,16 @@ function getById(id) {
 }
 
 function register(Name, Email, Password, ConfirmPassword) {
+<<<<<<< HEAD
 debugger;
     return axios.post(`${API_URL}/Account/Register`, { Name, Email, Password, ConfirmPassword })
     .then(
           history.push('/login')
     );
+=======
+
+    return axios.post(`${API_URL}/Account/Register`, { Name, Email, Password, ConfirmPassword }).then(handleResponse);
+>>>>>>> 9aabf6880920dc13c5c1d705e212bf09c39a7ad8
 }
 
 function Forgotpassword(Email) {

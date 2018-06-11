@@ -11,7 +11,10 @@ function success(message) {
 }
 
 function error(message) {
+<<<<<<< HEAD
     debugger;
+=======
+>>>>>>> 9aabf6880920dc13c5c1d705e212bf09c39a7ad8
     return { type: alertConstants.ERROR, message };
 }
 
